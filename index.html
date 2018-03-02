@@ -2,14 +2,22 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Prompt" rel="stylesheet">
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>The Question Version 1.0</title>
+    <style>
+    body {
+        font-family: 'Prompt', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+    </style>
 </head>
 
 <body>
@@ -21,28 +29,42 @@
     <div class="row"> 
         <div class="col s12">
             <form action="#">
-                <p>
-                    <input class="with-gap" name="group3" type="radio" id="test5" checked />
-                    <label for="test5">Red</label>
-                </p>
-                <p>
+                 <p>
                     <label>
-                        <input name="group1" type="radio" />
-                        <span>Yellow</span>
+                        <input class="with-gap" name="group1" type="radio" />
+                        <span>ไม่เห็นด้วยอย่างยิ่ง</span>
                     </label>
                 </p>
                 <p>
                     <label>
                         <input class="with-gap" name="group1" type="radio" />
-                        <span>Green</span>
+                        <span>ไม่เห็นด้วย</span>
                     </label>
                 </p>
                 <p>
                     <label>
+                        <input class="with-gap" name="group1" type="radio" />
+                        <span>เห็นด้วยปานกลาง</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" />
+                        <span>เห็นด้วย</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input class="with-gap" name="group1" type="radio" />
+                        <span>เห็นด้วยอย่างยิ่ง</span>
+                    </label>
+                </p>
+                <!-- <p>
+                    <label>
                         <input name="group1" type="radio" disabled="disabled" />
                         <span>Brown</span>
                     </label>
-                </p>
+                </p> -->
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
             </button>
