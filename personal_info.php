@@ -57,13 +57,13 @@
                         <h5>1. เพศ</h5>
                         <p>
                             <label>
-                                <input class="with-gap" name="group1" type="radio" />
+                                <input class="with-gap" name="gender" type="radio" />
                                 <span>ชาย</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input class="with-gap" name="group1" type="radio" />
+                                <input class="with-gap" name="gender" type="radio" />
                                 <span>หญิง</span>
                                 
                             </label>
@@ -86,20 +86,20 @@
                         <h5>3. ระดับการศึกษา</h5>
                         <p>
                             <label>
-                                <input class="with-gap" name="group1" type="radio" />
+                                <input class="with-gap" name="grad" type="radio" />
                                 <span>น้อยกว่า ปริญญาตรี</span>
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input class="with-gap" name="group1" type="radio" />
+                                <input class="with-gap" name="grad" type="radio" />
                                 <span>ปริญญาตรี</span>
                                 
                             </label>
                         </p>
                         <p>
                             <label>
-                                <input class="with-gap" name="group1" type="radio" />
+                                <input class="with-gap" name="grad" type="radio" />
                                 <span>มากกว่า ปริญญาตรี</span>
                                 
                             </label>
