@@ -1,22 +1,22 @@
 <?php
-// include 'conx/mysql.php';
+include 'conx/mysql.php';
 
 
 
 
-// $sql = "SELECT * FROM question";
-// $result = $db->query($sql);
-// $row = $result->fetch_all();
+$sql = "SELECT * FROM question";
+$result = $db->query($sql);
+$row = $result->fetch_all();
 
 
-// print_r($row);
-
-
-
+print_r($row);
 
 
 
-// $db->close();
+
+
+
+$db->close();
 ?>
 
 <!DOCTYPE html>
@@ -46,48 +46,7 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
 <div class="container">
-        <div class="row">
-        
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                    <label for="disabled">Disabled</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                    This is an inline input field:
-                    <div class="input-field inline">
-                        <input id="email" type="email" class="validate">
-                        <label for="email" data-error="wrong" data-success="right">Email</label>
-                    </div>
-                    </div>
-                </div>
-            </form>
-
+    <div class="raw">
         <div class="col s4 m4 l4">
 
             <div class="row" style="border-bottom: 2px solid #eee">
@@ -98,7 +57,7 @@
                     <p class="center-align">แบบสอบถามบุคลิคภาพห้าองค์ประกอบกับการเล่นเกมในชีวิตประจำวัน</p>
                     
                 </div>
-                <!-- <div class="col s12 m12 l12">
+                <div class="col s12 m12 l12">
                     <div class="row">
                     	<div class="col s2 m2 l2"></div>
                         <div class="col s2 m2 l2">
@@ -117,7 +76,7 @@
                         <div class="col s2 m2 l2"></div> 
                     </div>
                     
-                </div> -->
+                </div>
                 <!-- <div class="col s12 m4 l2"><p>s12 m4</p></div>
                 <div class="col s12 m4 l8"><p>s12 m4</p></div>
                 <div class="col s12 m4 l2"><p>s12 m4</p></div> -->
