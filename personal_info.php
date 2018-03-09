@@ -46,20 +46,284 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
 <div class="container">
+        <h3>แบบสอบถาม เรื่องบุคลิกภาพ</h3>
+        <p>คำชี้แจง ให้ท่านพิจารณาข้อความแต่ละข้อต่อไปนี้ว่าสอดคล้องกับท่านมากน้อยเพียงใด โดยใส่เครื่องหมาย ✓ ตรงคำตอบที่ท่านต้องการเพียงคำตอบเดียวในแต่ละข้อและโปรดตอบคำถามให้ครบทุกข้อ
+</p>
         <div class="row">
         
             <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <h5>1. เพศ</h5>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>ชาย</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>หญิง</span>
+                                
+                            </label>
+                        </p>
                     </div>
                 </div>
                 <div class="row">
+                    <div class="input-field col s12">
+                    <h5>2. อายุ</h5>
+                    <input placeholder="Placeholder" id="age" type="text" class="validate">
+                    <!-- <label for="first_name">2.อายุ</label> -->
+                    </div>
+                    <!-- <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                    </div> -->
+                </div>
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <h5>3. ระดับการศึกษา</h5>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>น้อยกว่า ปริญญาตรี</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>ปริญญาตรี</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>มากกว่า ปริญญาตรี</span>
+                                
+                            </label>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <h5>4. ท่านเคยตอบแบบสอบถามออนไลน์หรือไม่</h5>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>เคย</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>ไม่เคย</span>
+                                
+                            </label>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <h5>5. เวลาที่เริ่มเล่นเกม</h5>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>ไม่เคยเล่นเกม</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>เริ่มเล่นเกมมาเป็นเวลาน้อยกว่า 1 ปี</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>เริ่มเล่นเกมมาเป็นเวลามากกว่า 1 ปี</span>
+                                
+                            </label>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <h5>6.ความถี่ในการเล่นเกมต่อสัปดาห์</h5>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>1-2 วันต่อสัปดาห์</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>3-5 วันต่อสัปดาห์</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>6-7 วันต่อสัปดาห์</span>
+                                
+                            </label>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <h5>7. เวลาที่ใช้ในการเล่นเกมต่อวัน</h5>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>น้อยกว่า 1 ชั่วโมงต่อวัน</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>มากกว่า 1 ชั่วโมงต่อวัน แต่ไม่เกิน 3 ชั่วโมง</span>   
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>มากกว่า 3 ชั่วโมงต่อวัน แต่ไม่เกิน 6 ชั่วโมง</span> 
+                                
+                            </label>
+                        </p>
+                         <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>มากกว่า 6 ชั่วโมงต่อวัน แต่ไม่เกิน 9 ชั่วโมง</span> 
+                                
+                            </label>
+                        </p>
+                         <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>มากกว่า  9 ชั่วโมงต่อวัน</span> 
+                                
+                            </label>
+                        </p>
+
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <h5>8. ช่วงเวลาที่นิยมเล่นเกมมากที่สุด</h5>                       
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>0.01 น. – 3.00 น.</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>3.01 น. – 6.00 น.</span>   
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>6.01 น. – 9.00 น.</span> 
+                                
+                            </label>
+                        </p>
+                         <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>9.01 น. – 12.00 น.</span> 
+                                
+                            </label>
+                        </p>
+                         <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>12.01 น. – 15.00 น.</span> 
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>15.01 น. – 18.00 น.</span> 
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>18.01 น. – 21.00 น.</span> 
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                 <span>21.00 น. – 24.00 น.</span> 
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <h5>9. อุปกรณ์ที่ใช้ในการเล่นเกม</h5>
+
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>โทรศัพท์มือถือ (Mobile phone)</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>แทปเล็ต (Tablet)</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>เครื่องเล่น console</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>คอมพิวเตอร์ตั้งโต๊ะ (Desktop)</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>คอมพิวเตอร์พกพา (Laptop)</span>
+                                
+                            </label>
+                        </p>
+                         <p>
+                            <label>
+                                <input class="with-gap" name="group1" type="radio" />
+                                <span>สมาร์ททีวี (Smart TV)</span>
+                                
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="row">
                     <div class="input-field col s12">
                     <input disabled value="I am not editable" id="disabled" type="text" class="validate">
                     <label for="disabled">Disabled</label>
@@ -85,115 +349,14 @@
                         <label for="email" data-error="wrong" data-success="right">Email</label>
                     </div>
                     </div>
-                </div>
-            </form>
-
-        <div class="col s4 m4 l4">
-
-            <div class="row" style="border-bottom: 2px solid #eee">
-                <div class="col s12">
-                    <!-- <div class="progress">
-                        <div class="indeterminate"></div>
-                    </div> -->
-                    <p class="center-align">แบบสอบถามบุคลิคภาพห้าองค์ประกอบกับการเล่นเกมในชีวิตประจำวัน</p>
-                    
-                </div>
-                <!-- <div class="col s12 m12 l12">
-                    <div class="row">
-                    	<div class="col s2 m2 l2"></div>
-                        <div class="col s2 m2 l2">
-                            <img class="responsive-img" src="img/image001.png"> 
-                        </div>
-                        <div class="col s2 m2 l2">
-                            <img class="responsive-img" src="img/image002.png">
-                        </div>
-                        <div class="col s2 m2 l2">
-							<img class="responsive-img" src="img/image003.png">
-                        </div>
-                        <div class="col s2 m2 l2">
-							<img class="responsive-img" src="img/image004.png">
-                        </div>
-                        
-                        <div class="col s2 m2 l2"></div> 
-                    </div>
-                    
                 </div> -->
-                <!-- <div class="col s12 m4 l2"><p>s12 m4</p></div>
-                <div class="col s12 m4 l8"><p>s12 m4</p></div>
-                <div class="col s12 m4 l2"><p>s12 m4</p></div> -->
-        </div>
-            <div class="row">
-                <div class="col s12 m8 l8 offset-m2 offset-l2">
-                    <form action="#">
-                        <h5>1. ฉันไม่ใช่คนช่างวิตกกังวล</h5>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>เห็นด้วยอย่างยิ่ง</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>เห็นด้วย</span>
-                                
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>เห็นด้วยปานกลาง</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>ไม่เห็นด้วย</span>
-                                
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>ไม่เห็นด้วยอย่างยิ่ง</span>                        
-                            </label>
-                        </p>
-                        <!-- <p>
-                                <label>
-                                    <input name="group1" type="radio" disabled="disabled" />
-                                    <span>Brown</span>
-                                </label>
-                            </p> -->
-                        <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                        </button> -->
-
-                </div>
-
+            </form>
+            <div class="col s3 m3 l3">
+                <p class="center-align">
+                    <a class="waves-effect waves-light btn">
+                    <i class="material-icons right">chevron_right</i>REGISTER & NEXT</a>
+                </p>
             </div>
-            <div class="row" style="border-bottom: 2px solid #EEE">
-                <div class="col s3 m3 l3">
-                    <p class="center-align">
-                        <a class="waves-effect waves-light btn">
-                        <i class="material-icons left">chevron_left</i>BACK</a>
-                    </p>
-                </div>
-                <div class="col s1 m3 l3">
-                    
-                </div>
-                <div class="col s1 m3 l3">
-                    
-                </div>
-                <div class="col s3 m3 l3">
-                    <!-- <p>s12 m6 l3</p> -->
-                    <p class="center-align">
-                        <a class="waves-effect waves-light btn">
-                        <i class="material-icons right">chevron_right</i>NEXT</a>
-                    </p>
-                </div>
-            </div>
-
-
         </div>
     </div>
      
