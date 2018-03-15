@@ -32,7 +32,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Prompt" rel="stylesheet">
     <!--Let browser know website is optimized for mobile-->
     
-    <title>The Question Version 1.0</title>
+    <title>The Question.</title>
     <style>
     body {
         font-family: 'Prompt', sans-serif;

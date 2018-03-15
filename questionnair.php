@@ -9,12 +9,50 @@ $result = $db->query($sql);
 $row = $result->fetch_all();
 
 
-print_r($row);
+// print_r($row);
+$data = "";
+$cnt=0;
+foreach ($row as $key => $value) {
+    $cnt++;
+    $data .= ' <div class="row">
+                <div class="col s12 m8 l8 offset-m2 offset-l2">
+                        <h5>'.$cnt.'. '.$value[1].'</h5>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group'.$value[0].'" type="radio" />
+                                <span>เห็นด้วยอย่างยิ่ง</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group'.$value[0].'" type="radio" />
+                                <span>เห็นด้วย</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group'.$value[0].'" type="radio" />
+                                <span>เห็นด้วยปานกลาง</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group'.$value[0].'" type="radio" />
+                                <span>ไม่เห็นด้วย</span>
+                                
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input class="with-gap" name="group'.$value[0].'" type="radio" />
+                                <span>ไม่เห็นด้วยอย่างยิ่ง</span>                        
+                            </label>
+                        </p>
+                </div>
 
-
-
-
-
+            </div>';
+}
 
 $db->close();
 ?>
@@ -81,7 +119,8 @@ $db->close();
                 <div class="col s12 m4 l8"><p>s12 m4</p></div>
                 <div class="col s12 m4 l2"><p>s12 m4</p></div> -->
         </div>
-            <div class="row">
+        <?php echo $data;?>
+            <!-- <div class="row">
                 <div class="col s12 m8 l8 offset-m2 offset-l2">
                     <form action="#">
                         <h5>1. ฉันไม่ใช่คนช่างวิตกกังวล</h5>
@@ -117,19 +156,11 @@ $db->close();
                                 <span>ไม่เห็นด้วยอย่างยิ่ง</span>                        
                             </label>
                         </p>
-                        <!-- <p>
-                                <label>
-                                    <input name="group1" type="radio" disabled="disabled" />
-                                    <span>Brown</span>
-                                </label>
-                            </p> -->
-                        <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                        </button> -->
-
+                       
+                    </form>
                 </div>
 
-            </div>
+            </div> -->
             <div class="row" style="border-bottom: 2px solid #EEE">
                 <div class="col s3 m3 l3">
                     <p class="center-align">
