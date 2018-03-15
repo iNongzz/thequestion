@@ -24,8 +24,9 @@
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
-
-   
+<a href="personal_info.php" >personal info</a>
+<br>
+ <a href="questionnair.php" >question</a>  
 </body>
 
 </html>
