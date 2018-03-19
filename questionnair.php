@@ -121,13 +121,13 @@ $db->close();
                         <div class="col s2 m2 l2">
                             <img class="responsive-img" src="img/image001.png"> 
                         </div>
-                        <div class="col s2 m2 l2">
+                        <div id="icon33" class="col s2 m2 l2" style="display: none;">
                             <img class="responsive-img" src="img/image002.png">
                         </div>
-                        <div class="col s2 m2 l2">
+                        <div id="icon66" class="col s2 m2 l2" style="display: none;">
 							<img class="responsive-img" src="img/image003.png">
                         </div>
-                        <div class="col s2 m2 l2">
+                        <div id="iconfinish" class="col s2 m2 l2" style="display: none;">
 							<img class="responsive-img" src="img/image004.png">
                         </div>
                         
@@ -139,7 +139,6 @@ $db->close();
                 <div class="col s12 m4 l8"><p>s12 m4</p></div>
                 <div class="col s12 m4 l2"><p>s12 m4</p></div> -->
         </div>
-        <div id="showcnt">0</div>
         <?php echo $data;?>
             <!-- <div class="row">
                 <div class="col s12 m8 l8 offset-m2 offset-l2">
@@ -207,27 +206,57 @@ $db->close();
 
         </div>
     </div>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+    <div class="raw">
+        <div class="col s12">
+           <p >
+            <span>Progress : </span><span class="show_p">0</span> <span>%</span>
+           </p>
+        </div>
+        <div class="col s12">
+             <div class="progress">
+                <div class="determinate" style="width: 70%"></div>
+            </div>
+        </div>
     </div>
+   
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
-       $(".q1").show();
+       $(".q1").show(function(){
+            return calpercentage(1, 60);
+       });
     });
 
     function ck_next(number) {
         let page = (number*1)+1;
         $(".q"+page).show();
         $(".q"+number).hide();
+        return calpercentage(number, 60);
     }
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
         $(".q"+page).show();
         $(".q"+number).hide();
+        return calpercentage(number, 60);
     }
+
+    function calpercentage(number, total) {
+        result = ((number*1) / (total*1)) * 100;
+        $(".show_p").html(parseFloat(result).toFixed(0));
+        $(".determinate").attr("style","width: "+result+"%");
+
+        if(result >= 33 && result< 66) {
+            $("#icon33").show();
+        } else if(result >= 66 && result < 100) {
+            $("#icon66").show();
+        } else if(result >= 100){
+            // 100% of finish
+            $("#iconfinish").show();
+        }
+    }
+
 
 </script>
    
