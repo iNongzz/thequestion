@@ -1,20 +1,16 @@
 <?php
 include 'conx/mysql.php';
 
-
-
-
 $sql = "SELECT * FROM question";
 $result = $db->query($sql);
 $row = $result->fetch_all();
 
-
-// print_r($row);
 $data = "";
 $cnt=0;
 foreach ($row as $key => $value) {
     $cnt++;
-    $data .= ' <div class="row">
+    $data .= ' <div class="q'.$cnt.'" style="display:none;">
+                <div class="row">
                 <div class="col s12 m8 l8 offset-m2 offset-l2">
                         <h5>'.$cnt.'. '.$value[1].'</h5>
                         <p>
@@ -51,10 +47,34 @@ foreach ($row as $key => $value) {
                         </p>
                 </div>
 
-            </div>';
+            </div>
+            <div class="row">
+                <div class="col s3 m3 l3">
+                    <p class="center-align">
+                        <a class="waves-effect waves-light btn"  onclick="ck_prev('.$cnt.');">
+                        <i class="material-icons left">chevron_left</i>BACK</a>
+                    </p>
+                </div>
+                <div class="col s1 m3 l3">
+                    
+                </div>
+                <div class="col s1 m3 l3">
+                    
+                </div>
+                <div class="col s3 m3 l3">
+                  
+                    <p class="center-align">
+                        <a class="waves-effect waves-light btn" onclick="ck_next('.$cnt.');">
+                        <i class="material-icons right">chevron_right</i>NEXT</a>
+                    </p>
+                </div>
+            </div>
+            </div>
+            ';
 }
 
 $db->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -119,6 +139,7 @@ $db->close();
                 <div class="col s12 m4 l8"><p>s12 m4</p></div>
                 <div class="col s12 m4 l2"><p>s12 m4</p></div> -->
         </div>
+        <div id="showcnt">0</div>
         <?php echo $data;?>
             <!-- <div class="row">
                 <div class="col s12 m8 l8 offset-m2 offset-l2">
@@ -161,7 +182,7 @@ $db->close();
                 </div>
 
             </div> -->
-            <div class="row" style="border-bottom: 2px solid #EEE">
+            <!-- <div class="row" style="border-bottom: 2px solid #EEE">
                 <div class="col s3 m3 l3">
                     <p class="center-align">
                         <a class="waves-effect waves-light btn">
@@ -175,19 +196,40 @@ $db->close();
                     
                 </div>
                 <div class="col s3 m3 l3">
-                    <!-- <p>s12 m6 l3</p> -->
+                  
                     <p class="center-align">
                         <a class="waves-effect waves-light btn">
                         <i class="material-icons right">chevron_right</i>NEXT</a>
                     </p>
                 </div>
-            </div>
+            </div> -->
 
 
         </div>
     </div>
-     
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+    </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+       $(".q1").show();
+    });
+
+    function ck_next(number) {
+        let page = (number*1)+1;
+        $(".q"+page).show();
+        $(".q"+number).hide();
+    }
+
+    function ck_prev(number) {
+        let page = (number > 0 ? (number*1)-1 : 0 );
+        $(".q"+page).show();
+        $(".q"+number).hide();
+    }
+
+</script>
    
 </body>
 
