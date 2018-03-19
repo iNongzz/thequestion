@@ -24,9 +24,9 @@
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
-    <a href="personal_info.php" >personal info</a>
+    <!-- <a href="personal_info.php" >personal info</a>
     <br>
-    <a href="questionnair.php" >question</a>  
+    <a href="questionnair.php" >question</a>   -->
 
     <div class="container">
         <!-- Page Content goes here -->
@@ -39,9 +39,10 @@
             
             <h3>แบบสอบถาม เรื่องบุคลิกภาพ</h3>
             <p>คำชี้แจง ให้ท่านพิจารณาข้อความแต่ละข้อต่อไปนี้ว่าสอดคล้องกับท่านมากน้อยเพียงใด โดยใส่เครื่องหมาย ✓ ตรงคำตอบที่ท่านต้องการเพียงคำตอบเดียวในแต่ละข้อและโปรดตอบคำถามให้ครบทุกข้อ</p>
-            <button class="btn waves-effect waves-light" type="submit" name="action">GO
+            <!-- <button class="btn waves-effect waves-light" type="submit" name="action" onclick="window.location.href('personal_info.php')">GO
                 <i class="material-icons right">send</i>
-             </button>
+             </button> -->
+             <a class="waves-effect waves-light btn" href="personal_info.php" ><i class="material-icons right">send</i>Start</a>
             
         </div>
         <div class="col s12 m2 l2"></div>

@@ -224,22 +224,26 @@ $db->close();
 <script>
     $(document).ready(function(){
        $(".q1").show(function(){
-            return calpercentage(1, 60);
+            return calpercentage(1, 59);
        });
     });
 
     function ck_next(number) {
         let page = (number*1)+1;
-        $(".q"+page).show();
-        $(".q"+number).hide();
-        return calpercentage(number, 60);
+        if(number!=60) {
+            $(".q"+page).show();
+            $(".q"+number).hide();
+            return calpercentage(number, 59);
+        } else {
+            // finished and insearch data
+        }  
     }
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
         $(".q"+page).show();
         $(".q"+number).hide();
-        return calpercentage(number, 60);
+        return calpercentage(number, 59);
     }
 
     function calpercentage(number, total) {
