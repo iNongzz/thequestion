@@ -13,7 +13,7 @@ if ($db->connect_error) {
     die("Connection failed: " . $db->connect_error);
 } 
 mysqli_set_charset($db,"utf8");
-echo "Connected successfully";
+// echo "Connected successfully";
 
 
 
