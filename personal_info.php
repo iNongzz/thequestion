@@ -1,6 +1,29 @@
 <?php
-// include 'conx/mysql.php';
+session_start();
 
+include 'conx/mysql.php';
+include 'fndata.php';
+
+// check triker
+$st_sql = "SELECT tricker FROM user order by id desc limit 0,1";
+$st_res = $db->query($st_sql);
+$st_row = $st_res->fetch_assoc();
+$question_trigger=($st_row['tricker']==0 ? 1 : 0);
+//print_r($st_row);
+// generate user
+$arr_result = array();
+$arr_result = insert_user($db,$_SERVER['HTTP_USER_AGENT'],$question_trigger);
+
+$_SESSION['qtricker'] = $question_trigger;
+$_SESSION['userid'] = $arr_result['userid'];
+$_SESSION['userkey'] = $arr_result['userkey'];
+
+
+
+
+
+// print_r($_SESSION);
+// exit;
 
 
 
@@ -47,7 +70,7 @@
 
 <div class="container">
         <h3>แบบสอบถาม เรื่องบุคลิกภาพ</h3>
-        <p>คำชี้แจง ให้ท่านพิจารณาข้อความแต่ละข้อต่อไปนี้ว่าสอดคล้องกับท่านมากน้อยเพียงใด โดยใส่เครื่องหมาย ✓ ตรงคำตอบที่ท่านต้องการเพียงคำตอบเดียวในแต่ละข้อและโปรดตอบคำถามให้ครบทุกข้อ
+        <!-- <p class="qdesc">คำชี้แจง ให้ท่านพิจารณาข้อความแต่ละข้อต่อไปนี้ว่าสอดคล้องกับท่านมากน้อยเพียงใด โดยใส่เครื่องหมาย ✓ ตรงคำตอบที่ท่านต้องการเพียงคำตอบเดียวในแต่ละข้อและโปรดตอบคำถามให้ครบทุกข้อ -->
 </p>
         <div class="row">
         
@@ -99,7 +122,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                         <h5>2. อายุ</h5>
-                        <input placeholder="Placeholder" id="age" type="text" class="validate">
+                        <input placeholder="Placeholder" id="age" type="number" class="validate">
                         <!-- <label for="first_name">2.อายุ</label> -->
                         </div>
                         <!-- <div class="input-field col s6">

@@ -1,5 +1,16 @@
 <?php
+session_start();
 include 'conx/mysql.php';
+include 'fndata.php';
+
+$question_trigger = $_SESSION['qtricker'];
+$uid = $_SESSION['userid'];
+$ukey = $_SESSION['userkey'];
+print_r($_SESSION);
+if(isset($_SESSION['qtricker']) && isset($_SESSION['ukey'])) {
+    header("Location: personal_info.php");
+    die();
+}
 
 $sql = "SELECT * FROM question";
 $result = $db->query($sql);
@@ -115,6 +126,7 @@ $db->close();
                     <p class="center-align">แบบสอบถามบุคลิคภาพห้าองค์ประกอบกับการเล่นเกมในชีวิตประจำวัน</p>
                     
                 </div>
+                <?php if($question_trigger==1 || $question_trigger==true) { ?>
                 <div class="col s12 m12 l12">
                     <div class="row">
                     	<div class="col s2 m2 l2"></div>
@@ -135,6 +147,7 @@ $db->close();
                     </div>
                     
                 </div>
+                <?php } ?>
                 <!-- <div class="col s12 m4 l2"><p>s12 m4</p></div>
                 <div class="col s12 m4 l8"><p>s12 m4</p></div>
                 <div class="col s12 m4 l2"><p>s12 m4</p></div> -->
