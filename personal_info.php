@@ -2,7 +2,7 @@
 session_start();
 
 include 'conx/mysql.php';
-include 'fndata.php';
+// include 'fndata.php';
 
 // check triker
 $st_sql = "SELECT tricker FROM user order by id desc limit 0,1";
@@ -19,25 +19,20 @@ $_SESSION['userid'] = $arr_result['userid'];
 $_SESSION['userkey'] = $arr_result['userkey'];
 
 
-
-
-
-// print_r($_SESSION);
-// exit;
-
-
-
-// $sql = "SELECT * FROM question";
-// $result = $db->query($sql);
-// $row = $result->fetch_all();
-
-
-// print_r($row);
-
-
-
-
-
+function insert_user($db, $device, $tricker) {
+    $genkey = md5(microtime().rand());
+    $sql = "INSERT INTO user (id,ukey,timestamp,device,tricker) VALUES (null,'$genkey', now(), '$device', '$tricker')";
+    
+    if ($db->query($sql) === TRUE) {
+        $last_id = $db->insert_id;
+        // echo "New record created successfully. Last inserted ID is: " . $last_id;
+        return array('userid'=>$last_id,'userkey'=>$genkey);
+    } else {
+        echo "Error: " . $sql . "<br>" . $db->error;
+        return array('userid'=>$db->error,'userkey'=>$db->error,'error'=>1);
+    }
+    // return array('userid'=>,'userkey'=>);
+}
 
 // $db->close();
 ?>
@@ -591,12 +586,40 @@ $_SESSION['userkey'] = $arr_result['userkey'];
         let page = (number*1)+1;
         $(".q"+page).show();
         $(".q"+number).hide();
+        return postdata();
+        // .then((success)=>{
+        //     console.log(success);
+        // })
+        // .catch((error)=>{
+        //     console.log(error);
+        // });
     }
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
         $(".q"+page).show();
         $(".q"+number).hide();
+        return postdata()
+        .then((success)=>{
+            console.log(success);
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+    }
+
+    function postdata() {
+        $.ajax({
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "JSON",
+            url: "fndata.php",
+            data: {"data1":'xxxx', "data2":'yyy'},
+            success: function (result) {
+                //do somthing here
+                console.log(result);
+            }
+        });
     }
 
     

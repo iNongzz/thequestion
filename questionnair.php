@@ -1,12 +1,12 @@
 <?php
 session_start();
 include 'conx/mysql.php';
-include 'fndata.php';
+// include 'fndata.php';
 
 $question_trigger = $_SESSION['qtricker'];
 $uid = $_SESSION['userid'];
 $ukey = $_SESSION['userkey'];
-print_r($_SESSION);
+// print_r($_SESSION);
 if(isset($_SESSION['qtricker']) && isset($_SESSION['ukey'])) {
     header("Location: personal_info.php");
     die();
@@ -246,7 +246,10 @@ $db->close();
         if(number!=60) {
             $(".q"+page).show();
             $(".q"+number).hide();
-            return calpercentage(number, 59);
+            return calpercentage(number, 59)
+            .then(()=>{
+                return postdata();
+            });
         } else {
             // finished and insearch data
         }  
@@ -256,7 +259,10 @@ $db->close();
         let page = (number > 0 ? (number*1)-1 : 0 );
         $(".q"+page).show();
         $(".q"+number).hide();
-        return calpercentage(number, 59);
+        return calpercentage(number, 59)
+        .then(()=>{
+            return postdata();
+        });
     }
 
     function calpercentage(number, total) {
@@ -272,6 +278,18 @@ $db->close();
             // 100% of finish
             $("#iconfinish").show();
         }
+    }
+
+    function postdata($arr_data=Array()) {
+        $.ajax({
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            url: "fndata.php",
+            data: "{'data1':'1', 'data2':'2', 'data3':'3'}",
+            success: function (result) {
+                //do somthing here
+            }
+        });
     }
 
 
