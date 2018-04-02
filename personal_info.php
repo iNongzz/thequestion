@@ -117,7 +117,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="input-field col s12">
                         <h5>2. อายุ</h5>
-                        <input placeholder="Placeholder" id="age" type="number" class="validate">
+                        <input placeholder="Placeholder" id="age" pattern="[0-9]*" type="number" class="validate">
                         <!-- <label for="first_name">2.อายุ</label> -->
                         </div>
                         <!-- <div class="input-field col s6">
@@ -545,7 +545,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(9);">
+                                <a class="waves-effect waves-light btn" id="prev_btn"  onclick="ck_prev(9);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -558,7 +558,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(9);">
+                                <a class="waves-effect waves-light btn" id="next_btn" onclick="ck_next(9);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -580,6 +580,17 @@ function insert_user($db, $device, $tricker) {
 <script>
     $(document).ready(function(){
        $(".q1").show();
+       $('selector').on("keydown",function(event){
+               if (event.keyCode == 9) {
+                   //you got tab i.e "NEXT" Btn
+                   $('#next_btn').trigger("click");
+               }
+               if (event.keyCode == 13) {
+                   //you got enter i.e "GO" Btn
+                   $('#next_btn').trigger("click");
+
+               }
+        });
     });
 
     function ck_next(number) {
@@ -611,12 +622,13 @@ function insert_user($db, $device, $tricker) {
     function postdata() {
         $.ajax({
             type: "POST",
-            contentType: "application/json; charset=utf-8",
-            dataType: "JSON",
+            // contentType: "application/json; charset=utf-8",
+            // dataType: "JSON",
             url: "fndata.php",
-            data: {"data1":'xxxx', "data2":'yyy'},
+            data: {xdata : 'xxx', ydata : '556'},
             success: function (result) {
                 //do somthing here
+                console.log('Success!!!');
                 console.log(result);
             }
         });
