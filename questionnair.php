@@ -258,7 +258,7 @@ $db->close();
 
     function ck_next(number) {
         let page = (number*1)+1;
-        let json_data = {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"};
+        let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         if(number!=60) {
             $(".q"+page).show();
             $(".q"+number).hide();
@@ -270,7 +270,7 @@ $db->close();
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
-        let json_data = {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"};
+        let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         if(number>1) {
             $(".q"+page).show();
             $(".q"+number).hide();
