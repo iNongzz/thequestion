@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(0);
 session_start();
 include 'conx/mysql.php';
 // include 'fndata.php';
@@ -62,7 +63,7 @@ foreach ($row as $key => $value) {
             <div class="row">
                 <div class="col s3 m3 l3">
                     <p class="center-align">
-                        <a class="waves-effect waves-light btn"  onclick="ck_prev('.$cnt.');">
+                        <a class="waves-effect waves-light btn prev_btn" onclick="ck_prev('.$cnt.');">
                         <i class="material-icons left">chevron_left</i>BACK</a>
                     </p>
                 </div>
@@ -75,7 +76,7 @@ foreach ($row as $key => $value) {
                 <div class="col s3 m3 l3">
                   
                     <p class="center-align">
-                        <a class="waves-effect waves-light btn" onclick="ck_next('.$cnt.');">
+                        <a class="waves-effect waves-light btn next_btn" onclick="ck_next('.$cnt.');">
                         <i class="material-icons right">chevron_right</i>NEXT</a>
                     </p>
                 </div>
@@ -235,34 +236,48 @@ $db->close();
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script>
+
     $(document).ready(function(){
        $(".q1").show(function(){
+            $('#prev_btn').hide();
             return calpercentage(1, 59);
        });
+
+       $('selector').on("keydown",function(event){
+               if (event.keyCode == 9) {
+                   //you got tab i.e "NEXT" Btn
+                   $('.next_btn').trigger("click");
+               }
+               if (event.keyCode == 13) {
+                   //you got enter i.e "GO" Btn
+                   $('.next_btn').trigger("click");
+
+               }
+        });
     });
 
     function ck_next(number) {
         let page = (number*1)+1;
+        let json_data = {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"};
         if(number!=60) {
             $(".q"+page).show();
             $(".q"+number).hide();
-            return calpercentage(number, 59)
-            .then(()=>{
-                return postdata();
-            });
-        } else {
-            // finished and insearch data
-        }  
+
+            postdata(json_data);
+            return calpercentage(number, 59);
+        } 
     }
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
-        $(".q"+page).show();
-        $(".q"+number).hide();
-        return calpercentage(number, 59)
-        .then(()=>{
-            return postdata();
-        });
+        let json_data = {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"};
+        if(number>1) {
+            $(".q"+page).show();
+            $(".q"+number).hide();
+            postdata(json_data);
+            return calpercentage(number, 59);
+        }
+       
     }
 
     function calpercentage(number, total) {
@@ -280,14 +295,16 @@ $db->close();
         }
     }
 
-    function postdata($arr_data=Array()) {
+    function postdata($data) {
         $.ajax({
             type: "POST",
-            contentType: "application/json; charset=utf-8",
             url: "fndata.php",
-            data: "{'data1':'1', 'data2':'2', 'data3':'3'}",
+            // data: {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"},
+            data: $data,
             success: function (result) {
                 //do somthing here
+                console.log('Success!!!');
+                console.log(result);
             }
         });
     }
