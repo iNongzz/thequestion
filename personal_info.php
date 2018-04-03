@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(0);
 session_start();
 
 include 'conx/mysql.php';
@@ -20,6 +21,7 @@ $_SESSION['userkey'] = $arr_result['userkey'];
 
 
 function insert_user($db, $device, $tricker) {
+
     $genkey = md5(microtime().rand());
     $sql = "INSERT INTO user (id,ukey,timestamp,device,tricker) VALUES (null,'$genkey', now(), '$device', '$tricker')";
     
@@ -92,7 +94,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <!-- <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(1);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(1);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p> -->
                         </div>
@@ -105,7 +107,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(1);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(1);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -128,7 +130,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(2);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(2);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -141,7 +143,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(2);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(2);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -179,7 +181,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(3);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(3);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -192,7 +194,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(3);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(3);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -222,7 +224,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(4);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(4);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -235,7 +237,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(4);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(4);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -272,7 +274,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(5);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(5);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -285,7 +287,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(5);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(5);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -323,7 +325,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(6);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(6);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -336,7 +338,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(6);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(6);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -388,7 +390,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(7);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(7);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -401,7 +403,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" onclick="ck_next(7);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(7);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -471,7 +473,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn"  onclick="ck_prev(8);">
+                                <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(8);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -485,7 +487,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <!-- <a class="waves-effect waves-light btn" onclick="ck_next(8);"> -->
-                                <a class="waves-effect waves-light btn" href="questionnair.php">
+                                <a class="waves-effect waves-light btn next_btn" href="questionnair.php">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -545,7 +547,7 @@ function insert_user($db, $device, $tricker) {
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" id="prev_btn"  onclick="ck_prev(9);">
+                                <a class="waves-effect waves-light btn prev_btn" onclick="ck_prev(9);">
                                 <i class="material-icons left">chevron_left</i>BACK</a>
                             </p>
                         </div>
@@ -558,7 +560,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
-                                <a class="waves-effect waves-light btn" id="next_btn" onclick="ck_next(9);">
+                                <a class="waves-effect waves-light btn next_btn" onclick="ck_next(9);">
                                 <i class="material-icons right">chevron_right</i>NEXT</a>
                             </p>
                         </div>
@@ -583,11 +585,11 @@ function insert_user($db, $device, $tricker) {
        $('selector').on("keydown",function(event){
                if (event.keyCode == 9) {
                    //you got tab i.e "NEXT" Btn
-                   $('#next_btn').trigger("click");
+                   $('.next_btn').trigger("click");
                }
                if (event.keyCode == 13) {
                    //you got enter i.e "GO" Btn
-                   $('#next_btn').trigger("click");
+                   $('.next_btn').trigger("click");
 
                }
         });
@@ -595,37 +597,27 @@ function insert_user($db, $device, $tricker) {
 
     function ck_next(number) {
         let page = (number*1)+1;
+        let json_data = {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"};
         $(".q"+page).show();
         $(".q"+number).hide();
-        return postdata();
-        // .then((success)=>{
-        //     console.log(success);
-        // })
-        // .catch((error)=>{
-        //     console.log(error);
-        // });
+        return postdata(json_data);
+
     }
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
+        let json_data = {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"};
         $(".q"+page).show();
         $(".q"+number).hide();
-        return postdata()
-        .then((success)=>{
-            console.log(success);
-        })
-        .catch((error)=>{
-            console.log(error);
-        });
+        return postdata(json_data)
     }
 
-    function postdata() {
+    function postdata($data) {
         $.ajax({
             type: "POST",
-            // contentType: "application/json; charset=utf-8",
-            // dataType: "JSON",
             url: "fndata.php",
-            data: {xdata : 'xxx', ydata : '556'},
+            // data: {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"},
+            data: $data,
             success: function (result) {
                 //do somthing here
                 console.log('Success!!!');

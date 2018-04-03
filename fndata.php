@@ -1,9 +1,9 @@
 <?php
 
-// echo $_POST['xdata'];
+echo $_POST['uid'];
 include 'conx/mysql.php';
-
-$arr_data = array("aid"=>null, "qid"=>"1","question_type"=>"x","title"=>"x","sorting"=>"x","device"=>"x","tricker"=>"1","uid"=>"17");
+$arr_data = $_POST;
+// $arr_data = array("aid"=>null, "qid"=>"1","question_type"=>"x","title"=>"x","sorting"=>"x","device"=>"x","tricker"=>"1","uid"=>"17");
 insert_answer($db, $arr_data);
 
 function insert_answer($db, $arr_data) {
