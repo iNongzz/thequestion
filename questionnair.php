@@ -134,17 +134,20 @@ $db->close();
                         <div class="col s2 m2 l2">
                             <img class="responsive-img" src="img/image001.png"> 
                         </div>
-                        <div id="icon33" class="col s2 m2 l2" style="display: none;">
-                            <img class="responsive-img" src="img/image002.png">
+                        <div class="col s2 m2 l2">
+                            <div id="icon33"  style="display: none;"><img class="responsive-img" src="img/image002.png"></div>
                         </div>
-                        <div id="icon66" class="col s2 m2 l2" style="display: none;">
-							<img class="responsive-img" src="img/image003.png">
+                        <div class="col s2 m2 l2">
+							<div id="icon66"  style="display: none;"><img class="responsive-img" src="img/image003.png"></div>
                         </div>
-                        <div id="iconfinish" class="col s2 m2 l2" style="display: none;">
-							<img class="responsive-img" src="img/image004.png">
+                        <div class="col s2 m2 l2">
+							<div id="iconfinish"  style="display: none;"><img class="responsive-img" src="img/image004.png"></div>
+                        </div>
+                        <div class="col s2 m2 l2">
+                            <div id="icontimer"  style="display: none;"><img class="responsive-img" width="50%" src="img/image005.png"></div>
                         </div>
                         
-                        <div class="col s2 m2 l2"></div> 
+                        <!-- <div class="col s2 m2 l2"></div>  -->
                     </div>
                     
                 </div>
@@ -254,7 +257,37 @@ $db->close();
 
                }
         });
+
+        
     });
+
+    $(function ($) {
+        var fiveMinutes = 60 * 10,
+        display = $('#time');
+        startTimer(fiveMinutes, display);
+    });
+
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            // display.text(minutes + ":" + seconds);
+            // console.log(minutes + ":" + seconds);
+            if (--timer < 0) {
+                timer = duration;
+            }
+
+            if(minutes < 1) {
+                $('#icontimer').show();
+            }
+
+        }, 1000);
+    }
 
     function ck_next(number) {
         
