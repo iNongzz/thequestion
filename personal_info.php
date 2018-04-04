@@ -597,12 +597,6 @@ function insert_user($db, $device, $tricker) {
         });
     });
 
-    // function doNothing()
-    // {
-    //     $('.next_btn').trigger("click");
-    //     return false;
-    // }
-    //$('input[name=name_of_your_radiobutton]:checked').val();
     function ck_next(number) {
         let page = (number*1)+1;
         let json_data = {aid : "null", qid : number, question_type : "1", title : "question part 1", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
