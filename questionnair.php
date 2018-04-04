@@ -8,7 +8,7 @@ $question_trigger = $_SESSION['qtricker'];
 $uid = $_SESSION['userid'];
 $ukey = $_SESSION['userkey'];
 // print_r($_SESSION);
-if(isset($_SESSION['qtricker']) && isset($_SESSION['ukey'])) {
+if(!isset($_SESSION['qtricker'])) {
     header("Location: personal_info.php");
     die();
 }
@@ -239,7 +239,7 @@ $db->close();
 
     $(document).ready(function(){
        $(".q1").show(function(){
-            $('#prev_btn').hide();
+            // $('.prev_btn').hide();
             return calpercentage(1, 59);
        });
 
@@ -257,6 +257,9 @@ $db->close();
     });
 
     function ck_next(number) {
+        
+            $('.prev_btn').show();
+        
         let page = (number*1)+1;
         let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         if(number!=60) {
@@ -269,6 +272,9 @@ $db->close();
     }
 
     function ck_prev(number) {
+        if(number<2){
+            $('.prev_btn').hide();
+        }
         let page = (number > 0 ? (number*1)-1 : 0 );
         let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         if(number>1) {
