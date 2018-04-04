@@ -71,7 +71,7 @@ function insert_user($db, $device, $tricker) {
 </p>
         <div class="row">
         
-            <form class="col s12">
+            <form id="myform" class="col s12"  onSubmit="return doNothing()">
                 <div class="q1" style="display: none;">
                      <div class="row">
                         <div class="input-field col s12">
@@ -582,18 +582,26 @@ function insert_user($db, $device, $tricker) {
 <script>
     $(document).ready(function(){
        $(".q1").show();
-       $('selector').on("keydown",function(event){
+       $('#myform').on("keydown",function(event){
                if (event.keyCode == 9) {
                    //you got tab i.e "NEXT" Btn
                    $('.next_btn').trigger("click");
+                   ck_next(2);
                }
                if (event.keyCode == 13) {
                    //you got enter i.e "GO" Btn
-                   $('.next_btn').trigger("click");
-
+                   event.preventDefault();
+                   // $('.next_btn').trigger("click");
+                   ck_next(2);
                }
         });
     });
+
+    // function doNothing()
+    // {
+    //     $('.next_btn').trigger("click");
+    //     return false;
+    // }
     //$('input[name=name_of_your_radiobutton]:checked').val();
     function ck_next(number) {
         let page = (number*1)+1;
