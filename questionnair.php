@@ -25,7 +25,7 @@ foreach ($row as $key => $value) {
                 <div class="row">
                 <div class="col s12 m8 l8 offset-m2 offset-l2">
                         <h6>'.$cnt.'. '.$value[1].'</h6>
-                        
+
                         <p>
                             <label>
                                 <input class="with-gap" name="group'.$value[0].'" type="radio" />
@@ -62,18 +62,14 @@ foreach ($row as $key => $value) {
 
             </div>
             <div class="row">
+                <div class="col s1 m3 l3"></div>
                 <div class="col s3 m3 l3">
                     <p class="center-align">
                         <a class="waves-effect waves-light btn prev_btn" onclick="ck_prev('.$cnt.');">
                         <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                     </p>
                 </div>
-                <div class="col s1 m3 l3">
-                    
-                </div>
-                <div class="col s1 m3 l3">
-                    
-                </div>
+                
                 <div class="col s3 m3 l3">
                   
                     <p class="center-align">
@@ -81,6 +77,7 @@ foreach ($row as $key => $value) {
                         <i class="material-icons right">chevron_right</i>ถัดไป</a>
                     </p>
                 </div>
+                <div class="col s1 m3 l3"></div>
             </div>
             </div>
             ';
@@ -164,69 +161,6 @@ $db->close();
                 <div class="col s12 m4 l2"><p>s12 m4</p></div> -->
         </div>
         <?php echo $data;?>
-            <!-- <div class="row">
-                <div class="col s12 m8 l8 offset-m2 offset-l2">
-                    <form action="#">
-                        <h6>1. ฉันไม่ใช่คนช่างวิตกกังวล</h6>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>เห็นด้วยอย่างยิ่ง</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>เห็นด้วย</span>
-                                
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>เห็นด้วยปานกลาง</span>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>ไม่เห็นด้วย</span>
-                                
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input class="with-gap" name="group1" type="radio" />
-                                <span>ไม่เห็นด้วยอย่างยิ่ง</span>                        
-                            </label>
-                        </p>
-                       
-                    </form>
-                </div>
-
-            </div> -->
-            <!-- <div class="row" style="border-bottom: 2px solid #EEE">
-                <div class="col s3 m3 l3">
-                    <p class="center-align">
-                        <a class="waves-effect waves-light btn">
-                        <i class="material-icons left">chevron_left</i>BACK</a>
-                    </p>
-                </div>
-                <div class="col s1 m3 l3">
-                    
-                </div>
-                <div class="col s1 m3 l3">
-                    
-                </div>
-                <div class="col s3 m3 l3">
-                  
-                    <p class="center-align">
-                        <a class="waves-effect waves-light btn">
-                        <i class="material-icons right">chevron_right</i>NEXT</a>
-                    </p>
-                </div>
-            </div> -->
-
 
         </div>
     </div>

@@ -96,18 +96,14 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <!-- <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(1);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p> -->
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                        
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -115,6 +111,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -133,18 +130,14 @@ function insert_user($db, $device, $tricker) {
                         </div> -->
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(2);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                        
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -152,6 +145,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -192,18 +186,14 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(3);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                        
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -211,6 +201,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -236,18 +227,14 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(4);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                       
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -255,6 +242,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -287,18 +275,14 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(5);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                        
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -306,6 +290,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -339,18 +324,14 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(6);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                        
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -358,6 +339,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -405,18 +387,14 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(7);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                        
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -424,6 +402,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -463,17 +442,12 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(8);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
                         </div>
                         <div class="col s3 m3 l3">
                           
@@ -483,6 +457,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
 
@@ -537,18 +512,15 @@ function insert_user($db, $device, $tricker) {
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col s1 m3 l3"></div>
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn" onclick="ck_prev(9);">
                                 <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
-                        <div class="col s1 m3 l3">
-                            
-                        </div>
+                        
+                        
                         <div class="col s3 m3 l3">
                           
                             <p class="center-align">
@@ -556,6 +528,7 @@ function insert_user($db, $device, $tricker) {
                                 <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
+                        <div class="col s1 m3 l3"></div>
                     </div>
                 </div>
                
