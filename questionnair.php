@@ -24,7 +24,8 @@ foreach ($row as $key => $value) {
     $data .= ' <div class="q'.$cnt.'" style="display:none;">
                 <div class="row">
                 <div class="col s12 m8 l8 offset-m2 offset-l2">
-                        <h5>'.$cnt.'. '.$value[1].'</h5>
+                        <h6>'.$cnt.'. '.$value[1].'</h6>
+                        
                         <p>
                             <label>
                                 <input class="with-gap" name="group'.$value[0].'" type="radio" />
@@ -64,7 +65,7 @@ foreach ($row as $key => $value) {
                 <div class="col s3 m3 l3">
                     <p class="center-align">
                         <a class="waves-effect waves-light btn prev_btn" onclick="ck_prev('.$cnt.');">
-                        <i class="material-icons left">chevron_left</i>BACK</a>
+                        <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                     </p>
                 </div>
                 <div class="col s1 m3 l3">
@@ -77,7 +78,7 @@ foreach ($row as $key => $value) {
                   
                     <p class="center-align">
                         <a class="waves-effect waves-light btn next_btn" onclick="ck_next('.$cnt.');">
-                        <i class="material-icons right">chevron_right</i>NEXT</a>
+                        <i class="material-icons right">chevron_right</i>ถัดไป</a>
                     </p>
                 </div>
             </div>
@@ -108,6 +109,10 @@ $db->close();
         font-family: 'Prompt', sans-serif;
         font-family: 'Montserrat', sans-serif;
     }
+
+    h5 {
+        font-size: 80%;
+    }
     </style>
 </head>
 
@@ -124,8 +129,10 @@ $db->close();
                     <!-- <div class="progress">
                         <div class="indeterminate"></div>
                     </div> -->
-                    <p class="center-align">แบบสอบถามบุคลิคภาพห้าองค์ประกอบกับการเล่นเกมในชีวิตประจำวัน</p>
-                    
+                   <h6>แบบสอบถามเรื่อง บุคลิกภาพห้าองค์ประกอบกับการเล่นเกมดิจิตอล</h6>
+                    <p>
+                        <span>ส่วนที่ 1: ข้อมูลทั่วไปและการเล่นเกมดิจิตอลของผู้ตอบแบบสอบถาม</span>
+                    </p>
                 </div>
                 <?php if($question_trigger==1 || $question_trigger==true) { ?>
                 <div class="col s12 m12 l12">
@@ -160,7 +167,7 @@ $db->close();
             <!-- <div class="row">
                 <div class="col s12 m8 l8 offset-m2 offset-l2">
                     <form action="#">
-                        <h5>1. ฉันไม่ใช่คนช่างวิตกกังวล</h5>
+                        <h6>1. ฉันไม่ใช่คนช่างวิตกกังวล</h6>
                         <p>
                             <label>
                                 <input class="with-gap" name="group1" type="radio" />

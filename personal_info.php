@@ -66,7 +66,10 @@ function insert_user($db, $device, $tricker) {
 <script type="text/javascript" src="js/materialize.min.js"></script>
 
 <div class="container">
-        <h3>แบบสอบถาม เรื่องบุคลิกภาพ</h3>
+        <h6>แบบสอบถามเรื่อง บุคลิกภาพห้าองค์ประกอบกับการเล่นเกมดิจิตอล</h6>
+        <p>
+            <span>ข้อมูลทั่วไปและการเล่นเกมดิจิตอลของผู้ตอบแบบสอบถาม</span>
+        </p>   
         <!-- <p class="qdesc">คำชี้แจง ให้ท่านพิจารณาข้อความแต่ละข้อต่อไปนี้ว่าสอดคล้องกับท่านมากน้อยเพียงใด โดยใส่เครื่องหมาย ✓ ตรงคำตอบที่ท่านต้องการเพียงคำตอบเดียวในแต่ละข้อและโปรดตอบคำถามให้ครบทุกข้อ -->
 </p>
         <div class="row">
@@ -75,7 +78,8 @@ function insert_user($db, $device, $tricker) {
                 <div class="q1" style="display: none;">
                      <div class="row">
                         <div class="input-field col s12">
-                            <h5>1. เพศ</h5>
+                            <h6>1. เพศ</h6>
+
                             <p>
                                 <label>
                                     <input class="with-gap" name="q1" type="radio" value="1" />
@@ -95,7 +99,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <!-- <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(1);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p> -->
                         </div>
                         <div class="col s1 m3 l3">
@@ -108,7 +112,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(1);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -118,8 +122,9 @@ function insert_user($db, $device, $tricker) {
                 <div class="q2" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                        <h5>2. อายุ</h5>
-                        <input placeholder="Placeholder" id="age" pattern="[0-9]*" name="q2" type="number" class="validate">
+                        <h6>2. อายุ</h6>
+
+                        <input placeholder="รุณาระบุอายุ (ปี)" id="age" pattern="[0-9]*" name="q2" type="number" class="validate">
                         <!-- <label for="first_name">2.อายุ</label> -->
                         </div>
                         <!-- <div class="input-field col s6">
@@ -131,7 +136,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(2);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -144,7 +149,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(2);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -154,24 +159,32 @@ function insert_user($db, $device, $tricker) {
                 <div class="q3" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                            <h5>3. ระดับการศึกษา</h5>
+                            <h6>3. ระดับการศึกษาสูงสุดของท่าน</h6>
+
                             <p>
                                 <label>
                                     <input class="with-gap" name="q3" type="radio" value="1" />
-                                    <span>น้อยกว่า ปริญญาตรี</span>
+                                    <span>ประถมศึกษา</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q3" type="radio" value="2" />
-                                    <span>ปริญญาตรี</span>
+                                    <span>มัธยมศึกษาหรือเทียบเท่า</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q3" type="radio" value="3" />
-                                    <span>มากกว่า ปริญญาตรี</span>
+                                    <span>ปริญญาตรีหรือเทียบเท่า</span>
+                                    
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="q3" type="radio" value="4" />
+                                    <span>สูงกว่าปริญญาตรี</span>
                                     
                                 </label>
                             </p>
@@ -182,7 +195,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(3);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -195,7 +208,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(3);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -204,7 +217,8 @@ function insert_user($db, $device, $tricker) {
                 <div class="q4" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                            <h5>4. ท่านเคยตอบแบบสอบถามออนไลน์หรือไม่</h5>
+                            <h6>4. ท่านเคยตอบแบบสอบถามออนไลน์หรือไม่</h6>
+
                             <p>
                                 <label>
                                     <input class="with-gap" name="q4" type="radio" value="1" />
@@ -225,7 +239,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(4);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -238,7 +252,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(4);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -247,24 +261,25 @@ function insert_user($db, $device, $tricker) {
                 <div class="q5" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                            <h5>5. เวลาที่เริ่มเล่นเกม</h5>
+                            <h6>5. ท่านเริ่มเล่นเกมดิจิตอลมาแล้วเป็นระยะเวลานานเท่าใด</h6>
+
                             <p>
                                 <label>
                                     <input class="with-gap" name="q5" type="radio" value="1" />
-                                    <span>ไม่เคยเล่นเกม</span>
+                                    <span>ไม่เคยเล่นเกมดิจิตอลเลย</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q5" type="radio" value="2" />
-                                    <span>เริ่มเล่นเกมมาเป็นเวลาน้อยกว่า 1 ปี</span>
+                                    <span>เริ่มเล่นเกมดิจิตอลมาเป็นระยะเวลานานน้อยกว่า 1 ปี</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q5" type="radio" value="3" />
-                                    <span>เริ่มเล่นเกมมาเป็นเวลามากกว่า 1 ปี</span>
+                                    <span>เริ่มเล่นเกมดิจิตอลมาเป็นระยะเวลานานมากกว่า 1 ปี</span>
                                     
                                 </label>
                             </p>
@@ -275,7 +290,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(5);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -288,7 +303,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(5);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -298,7 +313,8 @@ function insert_user($db, $device, $tricker) {
                 <div class="q6" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                            <h5>6.ความถี่ในการเล่นเกมต่อสัปดาห์</h5>
+                            <h6>6. ท่านใช้เวลาเล่นเกมดิจิตอลโดยเฉลี่ยกี่วันต่อสัปดาห์</h6>
+
                             <p>
                                 <label>
                                     <input class="with-gap" name="q6" type="radio" value="1" />
@@ -326,7 +342,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(6);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -339,7 +355,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(6);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -350,7 +366,8 @@ function insert_user($db, $device, $tricker) {
                 <div class="q7" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                            <h5>7. เวลาที่ใช้ในการเล่นเกมต่อวัน</h5>
+                            <h6>7. ท่านใช้เวลาเล่นเกมดิจิตอลโดยเฉลี่ยกี่ชั่วโมงต่อสัปดาห์</h6>
+
                             <p>
                                 <label>
                                     <input class="with-gap" name="q7" type="radio" value="1" />
@@ -391,7 +408,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(7);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -404,7 +421,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(7);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -414,67 +431,42 @@ function insert_user($db, $device, $tricker) {
                 <div class="q8" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                            <h5>8. ช่วงเวลาที่นิยมเล่นเกมมากที่สุด</h5>                       
+                            <h6>8. ช่วงเวลาใดที่ท่านนิยมเล่นเกมมากที่สุด</h6>
+                                                
                             <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="1" />
-                                    <span>0.01 น. – 3.00 น.</span>
+                                    <span>0.01 น. - 6.00 น.</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="2" />
-                                    <span>3.01 น. – 6.00 น.</span>   
+                                    <span>6.01 น. - 12.00 น.</span>   
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="3" />
-                                     <span>6.01 น. – 9.00 น.</span> 
+                                     <span>12.01 น. - 18.00 น.</span> 
                                     
                                 </label>
                             </p>
                              <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="4" />
-                                     <span>9.01 น. – 12.00 น.</span> 
+                                     <span>18.01 น. - 24.00 น.</span> 
                                     
                                 </label>
                             </p>
-                             <p>
-                                <label>
-                                    <input class="with-gap" name="q8" type="radio" value="5" />
-                                     <span>12.01 น. – 15.00 น.</span> 
-                                    
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="q8" type="radio" value="6" />
-                                     <span>15.01 น. – 18.00 น.</span> 
-                                    
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="q8" type="radio" value="7" />
-                                     <span>18.01 น. – 21.00 น.</span> 
-                                    
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="q8" type="radio" value="8" />
-                                     <span>21.00 น. – 24.00 น.</span> 
-                                </label>
-                            </p>
+                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn"  onclick="ck_prev(8);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -488,7 +480,7 @@ function insert_user($db, $device, $tricker) {
                             <p class="center-align">
                                 <!-- <a class="waves-effect waves-light btn" onclick="ck_next(8);"> -->
                                 <a class="waves-effect waves-light btn next_btn" href="questionnair.php">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>
@@ -499,7 +491,7 @@ function insert_user($db, $device, $tricker) {
                 <div class="q9" style="display: none;">
                     <div class="row">
                         <div class="input-field col s12">
-                            <h5>9. อุปกรณ์ที่ใช้ในการเล่นเกม</h5>
+                            <h6>9. อุปกรณ์ที่ใช้ในการเล่นเกม</h6>
 
                             <p>
                                 <label>
@@ -548,7 +540,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="col s3 m3 l3">
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn prev_btn" onclick="ck_prev(9);">
-                                <i class="material-icons left">chevron_left</i>BACK</a>
+                                <i class="material-icons left">chevron_left</i>ย้อนกลับ</a>
                             </p>
                         </div>
                         <div class="col s1 m3 l3">
@@ -561,7 +553,7 @@ function insert_user($db, $device, $tricker) {
                           
                             <p class="center-align">
                                 <a class="waves-effect waves-light btn next_btn" onclick="ck_next(9);">
-                                <i class="material-icons right">chevron_right</i>NEXT</a>
+                                <i class="material-icons right">chevron_right</i>ถัดไป</a>
                             </p>
                         </div>
                     </div>

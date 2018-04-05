@@ -17,6 +17,7 @@
         font-family: 'Prompt', sans-serif;
         font-family: 'Montserrat', sans-serif;
     }
+    
     </style>
 </head>
 
@@ -37,12 +38,14 @@
         <div class="col s12 m2 l2"></div>
         <div class="col s12 m8 l8">
             
-            <h3>แบบสอบถาม เรื่องบุคลิกภาพ</h3>
-            <p>คำชี้แจง ให้ท่านพิจารณาข้อความแต่ละข้อต่อไปนี้ว่าสอดคล้องกับท่านมากน้อยเพียงใด โดยใส่เครื่องหมาย ✓ ตรงคำตอบที่ท่านต้องการเพียงคำตอบเดียวในแต่ละข้อและโปรดตอบคำถามให้ครบทุกข้อ</p>
+            <h6>แบบสอบถามเรื่อง บุคลิกภาพห้าองค์ประกอบกับการเล่นเกมดิจิตอล</h6>
+            <p>"คำชี้แจง</p>
+            <p>ให้ท่านพิจารณาข้อความแต่ละข้อต่อไปนี้ว่าสอดคล้องกับท่านมากน้อยเพียงใด โดยใส่เครื่องหมาย ✓ ตรงคำตอบที่ท่านต้องการเพียงคำตอบเดียวในแต่ละข้อ และขอความร่วมมือในการตอบคำถามอย่างต่อเนื่องให้ครบทุกข้อ</p>
+            <p>ข้อมูลที่ได้รับ จะถูกนำไปใช้เพื่อผลประโยชน์ทางการศึกษา โดยข้อมูลจะเป็นความลับและการประเมินผลจะกระทำในภาพรวมเท่านั้น ขอขอบคุณที่ท่านให้ความอนุเคราะห์ในการตอบแบบสอบถามครั้งนี้"</p>
             <!-- <button class="btn waves-effect waves-light" type="submit" name="action" onclick="window.location.href('personal_info.php')">GO
                 <i class="material-icons right">send</i>
              </button> -->
-             <a class="waves-effect waves-light btn" href="personal_info.php" ><i class="material-icons right">send</i>Start</a>
+             <a class="waves-effect waves-light btn" href="personal_info.php" ><i class="material-icons right">send</i>เริ่มต้น</a>
             
         </div>
         <div class="col s12 m2 l2"></div>
