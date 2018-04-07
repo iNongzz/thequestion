@@ -7,9 +7,9 @@ include 'conx/mysql.php';
 $question_trigger = $_SESSION['qtricker'];
 $uid = $_SESSION['userid'];
 $ukey = $_SESSION['userkey'];
-// print_r($_SESSION);
+
 if(!isset($_SESSION['qtricker'])) {
-    header("Location: personal_info.php");
+    header("Location: index.php");
     die();
 }
 
