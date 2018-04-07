@@ -83,13 +83,13 @@ function insert_user($db, $device, $tricker) {
                             <p>
                                 <label>
                                     <input class="with-gap" name="q1" type="radio" value="1" />
-                                    <span>ชาย</span>
+                                    <span class="black-text">ชาย</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q1" type="radio" value="2" />
-                                    <span>หญิง</span>
+                                    <span class="black-text">หญิง</span>
                                     
                                 </label>
                             </p>
@@ -121,7 +121,7 @@ function insert_user($db, $device, $tricker) {
                         <div class="input-field col s12">
                         <h6>2. อายุ</h6>
 
-                        <input placeholder="รุณาระบุอายุ (ปี)" id="age" pattern="[0-9]*" name="q2" type="number" class="validate">
+                        <input placeholder="กรุณาระบุอายุ (ปี)" id="age" pattern="[0-9]*" name="q2" type="number" class="validate">
                         <!-- <label for="first_name">2.อายุ</label> -->
                         </div>
                         <!-- <div class="input-field col s6">
@@ -158,27 +158,27 @@ function insert_user($db, $device, $tricker) {
                             <p>
                                 <label>
                                     <input class="with-gap" name="q3" type="radio" value="1" />
-                                    <span>ประถมศึกษา</span>
+                                    <span class="black-text">ประถมศึกษา</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q3" type="radio" value="2" />
-                                    <span>มัธยมศึกษาหรือเทียบเท่า</span>
+                                    <span class="black-text">มัธยมศึกษาหรือเทียบเท่า</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q3" type="radio" value="3" />
-                                    <span>ปริญญาตรีหรือเทียบเท่า</span>
+                                    <span class="black-text">ปริญญาตรีหรือเทียบเท่า</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q3" type="radio" value="4" />
-                                    <span>สูงกว่าปริญญาตรี</span>
+                                    <span class="black-text">สูงกว่าปริญญาตรี</span>
                                     
                                 </label>
                             </p>
@@ -213,13 +213,13 @@ function insert_user($db, $device, $tricker) {
                             <p>
                                 <label>
                                     <input class="with-gap" name="q4" type="radio" value="1" />
-                                    <span>เคย</span>
+                                    <span class="black-text">เคย</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q4" type="radio" value="2" />
-                                    <span>ไม่เคย</span>
+                                    <span class="black-text">ไม่เคย</span>
                                     
                                 </label>
                             </p>
@@ -254,20 +254,20 @@ function insert_user($db, $device, $tricker) {
                             <p>
                                 <label>
                                     <input class="with-gap" name="q5" type="radio" value="1" />
-                                    <span>ไม่เคยเล่นเกมดิจิตอลเลย</span>
+                                    <span class="black-text">ไม่เคยเล่นเกมดิจิตอลเลย</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q5" type="radio" value="2" />
-                                    <span>เริ่มเล่นเกมดิจิตอลมาเป็นระยะเวลานานน้อยกว่า 1 ปี</span>
+                                    <span class="black-text">เริ่มเล่นเกมดิจิตอลมาเป็นระยะเวลานานน้อยกว่า 1 ปี</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q5" type="radio" value="3" />
-                                    <span>เริ่มเล่นเกมดิจิตอลมาเป็นระยะเวลานานมากกว่า 1 ปี</span>
+                                    <span class="black-text">เริ่มเล่นเกมดิจิตอลมาเป็นระยะเวลานานมากกว่า 1 ปี</span>
                                     
                                 </label>
                             </p>
@@ -303,20 +303,20 @@ function insert_user($db, $device, $tricker) {
                             <p>
                                 <label>
                                     <input class="with-gap" name="q6" type="radio" value="1" />
-                                    <span>1-2 วันต่อสัปดาห์</span>
+                                    <span class="black-text">1-2 วันต่อสัปดาห์</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q6" type="radio" value="2" />
-                                    <span>3-5 วันต่อสัปดาห์</span>
+                                    <span class="black-text">3-5 วันต่อสัปดาห์</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q6" type="radio" value="3" />
-                                    <span>6-7 วันต่อสัปดาห์</span>
+                                    <span class="black-text">6-7 วันต่อสัปดาห์</span>
                                     
                                 </label>
                             </p>
@@ -350,39 +350,40 @@ function insert_user($db, $device, $tricker) {
                         <div class="input-field col s12">
                             <h6>7. ท่านใช้เวลาเล่นเกมดิจิตอลโดยเฉลี่ยกี่ชั่วโมงต่อสัปดาห์</h6>
 
-                            <p>
+                            <input placeholder="ระบุจำนวนชั่วโมง" id="playtime" pattern="[0-9]*" name="q7" type="number" class="validate">
+                            <!-- <p>
                                 <label>
                                     <input class="with-gap" name="q7" type="radio" value="1" />
-                                    <span>น้อยกว่า 1 ชั่วโมงต่อวัน</span>
+                                    <span class="black-text">น้อยกว่า 1 ชั่วโมงต่อวัน</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q7" type="radio" value="2" />
-                                    <span>มากกว่า 1 ชั่วโมงต่อวัน แต่ไม่เกิน 3 ชั่วโมง</span>   
+                                    <span class="black-text">มากกว่า 1 ชั่วโมงต่อวัน แต่ไม่เกิน 3 ชั่วโมง</span>   
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q7" type="radio" value="3" />
-                                     <span>มากกว่า 3 ชั่วโมงต่อวัน แต่ไม่เกิน 6 ชั่วโมง</span> 
+                                     <span class="black-text">มากกว่า 3 ชั่วโมงต่อวัน แต่ไม่เกิน 6 ชั่วโมง</span> 
                                     
                                 </label>
                             </p>
                              <p>
                                 <label>
                                     <input class="with-gap" name="q7" type="radio" value="4" />
-                                     <span>มากกว่า 6 ชั่วโมงต่อวัน แต่ไม่เกิน 9 ชั่วโมง</span> 
+                                     <span class="black-text">มากกว่า 6 ชั่วโมงต่อวัน แต่ไม่เกิน 9 ชั่วโมง</span> 
                                     
                                 </label>
                             </p>
                              <p>
                                 <label>
                                     <input class="with-gap" name="q7" type="radio" value="5" />
-                                     <span>มากกว่า  9 ชั่วโมงต่อวัน</span> 
+                                     <span class="black-text">มากกว่า  9 ชั่วโมงต่อวัน</span> 
                                     
                                 </label>
-                            </p>
+                            </p> -->
 
                         </div>
                     </div>
@@ -415,26 +416,26 @@ function insert_user($db, $device, $tricker) {
                             <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="1" />
-                                    <span>0.01 น. - 6.00 น.</span>
+                                    <span class="black-text">0.01 น. - 6.00 น.</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="2" />
-                                    <span>6.01 น. - 12.00 น.</span>   
+                                    <span class="black-text">6.01 น. - 12.00 น.</span>   
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="3" />
-                                     <span>12.01 น. - 18.00 น.</span> 
+                                     <span class="black-text">12.01 น. - 18.00 น.</span> 
                                     
                                 </label>
                             </p>
                              <p>
                                 <label>
                                     <input class="with-gap" name="q8" type="radio" value="4" />
-                                     <span>18.01 น. - 24.00 น.</span> 
+                                     <span class="black-text">18.01 น. - 24.00 น.</span> 
                                     
                                 </label>
                             </p>
@@ -471,41 +472,41 @@ function insert_user($db, $device, $tricker) {
                             <p>
                                 <label>
                                     <input class="with-gap" name="q9" type="radio" value="8" />
-                                    <span>โทรศัพท์มือถือ (Mobile phone)</span>
+                                    <span class="black-text">โทรศัพท์มือถือ (Mobile phone)</span>
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q9" type="radio" value="8" />
-                                    <span>แทปเล็ต (Tablet)</span>
+                                    <span class="black-text">แทปเล็ต (Tablet)</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q9" type="radio" value="8" />
-                                    <span>เครื่องเล่น console</span>
+                                    <span class="black-text">เครื่องเล่น console</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q9" type="radio" value="8" />
-                                    <span>คอมพิวเตอร์ตั้งโต๊ะ (Desktop)</span>
+                                    <span class="black-text">คอมพิวเตอร์ตั้งโต๊ะ (Desktop)</span>
                                     
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input class="with-gap" name="q9" type="radio" value="8" />
-                                    <span>คอมพิวเตอร์พกพา (Laptop)</span>
+                                    <span class="black-text">คอมพิวเตอร์พกพา (Laptop)</span>
                                     
                                 </label>
                             </p>
                              <p>
                                 <label>
                                     <input class="with-gap" name="q9" type="radio" value="8" />
-                                    <span>สมาร์ททีวี (Smart TV)</span>
+                                    <span class="black-text">สมาร์ททีวี (Smart TV)</span>
                                     
                                 </label>
                             </p>
@@ -564,7 +565,7 @@ function insert_user($db, $device, $tricker) {
 
     function ck_next(number) {
         let page = (number*1)+1;
-        let json_data = {aid : "null", qid : number, question_type : "1", title : "question part 1", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
+        let json_data = {aid : "null", qid : number, question_type : "1", title : "question part 1", answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         $(".q"+page).show();
         $(".q"+number).hide();
         return postdata(json_data);
@@ -573,7 +574,7 @@ function insert_user($db, $device, $tricker) {
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
-        let json_data = {aid : "null", qid : number, question_type : "1", title : "question part 1", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
+        let json_data = {aid : "null", qid : number, question_type : "1", title : "question part 1", answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         $(".q"+page).show();
         $(".q"+number).hide();
         return postdata(json_data)
@@ -591,6 +592,16 @@ function insert_user($db, $device, $tricker) {
                 console.log(result);
             }
         });
+    }
+
+    function getDataFormat(qnumber, field_val) {
+        let result = '';
+        if(qnumber == 2 || qnumber == 7) {
+            result = $('#q'+qnumber).val();
+        } else {
+            result = $('input[name=q'+qnumber+']:checked').val();
+        }
+        return result;
     }
 
     

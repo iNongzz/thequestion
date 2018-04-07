@@ -7,9 +7,9 @@ include 'conx/mysql.php';
 $question_trigger = $_SESSION['qtricker'];
 $uid = $_SESSION['userid'];
 $ukey = $_SESSION['userkey'];
-// print_r($_SESSION);
+
 if(!isset($_SESSION['qtricker'])) {
-    header("Location: personal_info.php");
+    header("Location: index.php");
     die();
 }
 
@@ -29,33 +29,33 @@ foreach ($row as $key => $value) {
                         <p>
                             <label>
                                 <input class="with-gap" name="group'.$value[0].'" type="radio" />
-                                <span>เห็นด้วยอย่างยิ่ง</span>
+                                <span class="black-text">เห็นด้วยอย่างยิ่ง</span>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input class="with-gap" name="group'.$value[0].'" type="radio" />
-                                <span>เห็นด้วย</span>
+                                <span class="black-text">เห็นด้วย</span>
                                 
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input class="with-gap" name="group'.$value[0].'" type="radio" />
-                                <span>เห็นด้วยปานกลาง</span>
+                                <span class="black-text">เห็นด้วยปานกลาง</span>
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input class="with-gap" name="group'.$value[0].'" type="radio" />
-                                <span>ไม่เห็นด้วย</span>
+                                <span class="black-text">ไม่เห็นด้วย</span>
                                 
                             </label>
                         </p>
                         <p>
                             <label>
                                 <input class="with-gap" name="group'.$value[0].'" type="radio" />
-                                <span>ไม่เห็นด้วยอย่างยิ่ง</span>                        
+                                <span class="black-text">ไม่เห็นด้วยอย่างยิ่ง</span>                        
                             </label>
                         </p>
                 </div>
@@ -232,10 +232,10 @@ $db->close();
 
     function ck_next(number) {
         
-            $('.prev_btn').show();
+        $('.prev_btn').show();
         
         let page = (number*1)+1;
-        let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
+        let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2",answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         if(number!=60) {
             $(".q"+page).show();
             $(".q"+number).hide();
@@ -250,12 +250,12 @@ $db->close();
             $('.prev_btn').hide();
         }
         let page = (number > 0 ? (number*1)-1 : 0 );
-        let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
+        let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2",answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         if(number>1) {
             $(".q"+page).show();
             $(".q"+number).hide();
             postdata(json_data);
-            return calpercentage(number, 59);
+            return calpercentage(number-2, 59);
         }
        
     }
@@ -287,6 +287,16 @@ $db->close();
                 console.log(result);
             }
         });
+    }
+
+    function getDataFormat(qnumber, field_val) {
+        let result = '';
+        if(qnumber == 2 || qnumber == 7) {
+            result = $('#q'+qnumber).val();
+        } else {
+            result = $('input[name=q'+qnumber+']:checked').val();
+        }
+        return result;
     }
 
 

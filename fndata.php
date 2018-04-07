@@ -14,12 +14,12 @@ function insert_answer($db, $arr_data) {
     if(($row=$result->fetch_assoc())!=null) {
         // having id, update data
         echo "Update";
-        $update = "UPDATE `answers` SET `title`='".$arr_data['title']."',`timestamp`='".date("Y-m-d H:i:s")."',`device`='".$arr_data['device']."',`tricker`='".$arr_data['tricker']."' WHERE uid='".$arr_data['uid']."' and qid='".$arr_data['qid']."' ";
+        $update = "UPDATE `answers` SET `title`='".$arr_data['title']."',`answer_val`='".$arr_data['answer_val']."',`timestamp`='".date("Y-m-d H:i:s")."',`device`='".$arr_data['device']."',`tricker`='".$arr_data['tricker']."' WHERE uid='".$arr_data['uid']."' and qid='".$arr_data['qid']."' ";
         echo $res = $db->query($update) or die($db->error);
     } else {
         // No id, insert new data
         echo "Insert";
-        $insert = "INSERT INTO `answers`( `qid`, `question_type`, `title`, `sorting`, `uid`, `timestamp`, `device`, `tricker`) VALUES ('".$arr_data['qid']."','".$arr_data['question_type']."','".$arr_data['title']."',1,'".$arr_data['uid']."','".date("Y-m-d H:i:s")."','".$arr_data['device']."','".$arr_data['tricker']."')";
+        $insert = "INSERT INTO `answers`( `qid`, `question_type`, `title`, `sorting`, `uid`, `timestamp`, `device`, `tricker`) VALUES ('".$arr_data['qid']."','".$arr_data['question_type']."','".$arr_data['title']."','".$arr_data['answer_val']."',1,'".$arr_data['uid']."','".date("Y-m-d H:i:s")."','".$arr_data['device']."','".$arr_data['tricker']."')";
         echo $res = $db->query($insert) or die($db->error);
         // echo $db->error();//
     }
