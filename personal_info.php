@@ -20,6 +20,17 @@ $_SESSION['userid'] = $arr_result['userid'];
 $_SESSION['userkey'] = $arr_result['userkey'];
 
 
+// select old data
+// check triker
+echo $getq_sql = "SELECT * FROM answers WHERE uid = ".$arr_result['userid']." ";
+$getq_res = $db->query($getq_sql);
+$getq_row = $getq_res->fetch_assoc();
+
+print_r($getq_row);
+echo "UID : ";
+echo $arr_result['userid'];
+
+
 function insert_user($db, $device, $tricker) {
 
     $genkey = md5(microtime().rand());
@@ -565,7 +576,7 @@ function insert_user($db, $device, $tricker) {
 
     function ck_next(number) {
         let page = (number*1)+1;
-        let json_data = {aid : "null", qid : number, question_type : "1", title : "question part 1", answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
+        let json_data = {aid : null, qid : number, question_type : "1", title : "question part 1", answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         $(".q"+page).show();
         $(".q"+number).hide();
         return postdata(json_data);
@@ -574,18 +585,18 @@ function insert_user($db, $device, $tricker) {
 
     function ck_prev(number) {
         let page = (number > 0 ? (number*1)-1 : 0 );
-        let json_data = {aid : "null", qid : number, question_type : "1", title : "question part 1", answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
+        let json_data = {aid : null, qid : number, question_type : "1", title : "question part 1", answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};
         $(".q"+page).show();
         $(".q"+number).hide();
         return postdata(json_data)
     }
 
-    function postdata($data) {
+    function postdata(json_data) {
         $.ajax({
             type: "POST",
             url: "fndata.php",
             // data: {aid : "null", qid : "1",question_type : "x", title : "x", sorting : "x", device : "x", tricker : "1", uid : "17"},
-            data: $data,
+            data: json_data,
             success: function (result) {
                 //do somthing here
                 console.log('Success!!!');
