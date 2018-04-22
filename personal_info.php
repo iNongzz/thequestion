@@ -5,30 +5,62 @@ session_start();
 include 'conx/mysql.php';
 // include 'fndata.php';
 
-// check triker
-$st_sql = "SELECT tricker FROM user order by id desc limit 0,1";
-$st_res = $db->query($st_sql);
-$st_row = $st_res->fetch_assoc();
-$question_trigger=($st_row['tricker']==0 ? 1 : 0);
-//print_r($st_row);
-// generate user
-$arr_result = array();
-$arr_result = insert_user($db,$_SERVER['HTTP_USER_AGENT'],$question_trigger);
-
-$_SESSION['qtricker'] = $question_trigger;
-$_SESSION['userid'] = $arr_result['userid'];
-$_SESSION['userkey'] = $arr_result['userkey'];
-
-
 // select old data
 // check triker
-echo $getq_sql = "SELECT * FROM answers WHERE uid = ".$arr_result['userid']." ";
-$getq_res = $db->query($getq_sql);
-$getq_row = $getq_res->fetch_assoc();
+if(isset($_GET['uid'])) {
+    // Old user
 
-print_r($getq_row);
-echo "UID : ";
-echo $arr_result['userid'];
+    // new user
+    // check triker
+    $st_sql = "SELECT * FROM user WHERE id = ".$_GET['uid']."  limit 0,1";
+    $st_res = $db->query($st_sql);
+    $st_row = $st_res->fetch_assoc();
+
+    // set session
+    $_SESSION['qtricker'] = ($st_row['tricker']==0 ? 1 : 0);
+    $_SESSION['userid'] = $st_row['id'];
+    $_SESSION['userkey'] = $st_row['ukey'];
+
+
+    $awers = array();
+    $getq_sql = "SELECT * FROM answers WHERE uid = ".$_GET['uid']." AND question_type = 1 ORDER BY qid ASC";
+    $getq_res = $db->query($getq_sql);
+    // $getq_row = $getq_res->fetch_assoc();
+
+    // print_r($getq_row);
+    echo "UID : ";
+    echo $_GET['uid'].'<br>';
+
+    while($getq_row = $getq_res->fetch_assoc()) {
+        if($getq_row == 2 || $getq_row ==7) {
+            $arr_aws[$getq_row['qid']] = $getq_row['answers_val'];
+        } else {
+            $arr_aws[$getq_row['qid']] = $getq_row['aid'];
+        }
+    } // end while
+
+    print_r($arr_aws);
+
+} else {
+    // new user
+    // check triker
+    $st_sql = "SELECT tricker FROM user order by id desc limit 0,1";
+    $st_res = $db->query($st_sql);
+    $st_row = $st_res->fetch_assoc();
+    $question_trigger=($st_row['tricker']==0 ? 1 : 0);
+    //print_r($st_row);
+    // generate user
+    $arr_result = array();
+    $arr_result = insert_user($db,$_SERVER['HTTP_USER_AGENT'],$question_trigger);
+
+    // set session
+    $_SESSION['qtricker'] = $question_trigger;
+    $_SESSION['userid'] = $arr_result['userid'];
+    $_SESSION['userkey'] = $arr_result['userkey'];
+}
+
+print_r($_SESSION);
+
 
 
 function insert_user($db, $device, $tricker) {

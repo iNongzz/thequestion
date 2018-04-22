@@ -247,7 +247,9 @@ $db->close();
 
     function ck_prev(number) {
         if(number<2){
-            $('.prev_btn').hide();
+            // $('.prev_btn').hide();
+            $(location).attr('href', 'personal_info.php?uid='+$_SESSION['userid']);
+
         }
         let page = (number > 0 ? (number*1)-1 : 0 );
         let json_data = {aid : "null", qid : number, question_type : "2", title : "question part 2",answer_val : "", sorting : "0", device : "<?php echo $_SERVER['HTTP_USER_AGENT']; ?>", tricker : <?php echo $_SESSION['qtricker'];?>, uid : <?php echo $_SESSION['userid'];?>};

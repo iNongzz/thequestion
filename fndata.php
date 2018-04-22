@@ -19,7 +19,7 @@ function insert_answer($db, $arr_data) {
     } else {
         // No id, insert new data
         echo "Insert >>";
-        $insert = "INSERT INTO `answers`( `qid`, `question_type`, `title`, `sorting`, `uid`, `timestamp`, `device`, `tricker`) VALUES ('".$arr_data['qid']."','".$arr_data['question_type']."','".$arr_data['title']."',1,'".$arr_data['uid']."','".date("Y-m-d H:i:s")."','".$arr_data['device']."','".$arr_data['tricker']."')";
+        $insert = "INSERT INTO `answers`( `qid`, `question_type`, `title`, `answer_val`, `sorting`, `uid`, `timestamp`, `device`, `tricker`) VALUES ('".$arr_data['qid']."','".$arr_data['question_type']."','".$arr_data['title']."','".$arr_data['answers_val']."',1,'".$arr_data['uid']."','".date("Y-m-d H:i:s")."','".$arr_data['device']."','".$arr_data['tricker']."')";
         echo $res = $db->query($insert) or die($db->error);
         // echo $db->error();//
     }
